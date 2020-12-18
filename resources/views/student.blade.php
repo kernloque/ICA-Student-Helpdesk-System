@@ -96,7 +96,7 @@
 
             <div class="form-group">
                 <label for="concern">State the concern regarding your inquiry:</label>
-                <textarea class="form-control" name="concern" id="concern" rows="3" value="{{ old('concern') }}"></textarea>
+                <textarea class="form-control" name="concern" id="concern" rows="3" value="{{ old('concern') }}" required></textarea>
                 <span style="color:red">@error ('concern') {{ $message }} @enderror</span>
             </div>
 

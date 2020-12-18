@@ -5,6 +5,26 @@
     <div class="row justify-content-center">
         <div class="col-md-14">
             <div class="card">
+            <div class="card-header">
+            
+            <?php
+                $connection = mysqli_connect("localhost", "root", "", "ica_student_helpdesk_system");
+
+                $query = "SELECT id FROM students ORDER BY id";
+                $query_run = mysqli_query($connection, $query);
+
+                $row = mysqli_num_rows($query_run);
+                
+                $inquiry;
+                if($row < 1){
+                    $inquiry = "Inquiries";
+                }else{
+                    $inquiry = "Inquiry";
+                }
+                echo '<h1> '.$row.' '.$inquiry.'</h1>';
+            ?>
+
+            </div>
             <div class="card-header">Inquiries</div>
                 <div class="card-body bg-white">
                     <table class="table caption-top">

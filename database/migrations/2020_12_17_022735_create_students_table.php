@@ -21,7 +21,7 @@ class CreateStudentsTable extends Migration
             $table->string('email');
             $table->double('contact_number');
             $table->string('subject_inquiry');
-            $table->text('content_inquiry');
+            $table->text('content_inquiry')->nullable;
             $table->timestamps();
         });
     }
